@@ -11,7 +11,7 @@
 
 const char *MUSCLE_LONG_VERSION	= "MUSCLE v" SHORT_VERSION "."
 #include "svnversion.h"
-" by Robert C. Edgar";
+".gsl1 by Robert C. Edgar";
 
 int g_argc;
 char **g_argv;

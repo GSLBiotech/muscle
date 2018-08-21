@@ -18,7 +18,7 @@
 #endif
 
 extern const char *MUSCLE_LONG_VERSION;
-#define SHORT_VERSION "3.8.1551.gsl1"
+#define SHORT_VERSION "3.8"
 
 #include <stdlib.h>
 #include <string.h>
