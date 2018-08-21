@@ -78,7 +78,16 @@ void SetIter(unsigned uIter)
 void IncIter()
 	{
 	++g_uIter;
-	}
+}
+
+void CheckMaxIter()
+{
+  if( g_uIter >= g_uLocalMaxIters )
+  {
+    SaveCurrentAlignment();
+    exit(EXIT_Success);
+  }
+}
 
 void SetMaxIters(unsigned uMaxIters)
 	{

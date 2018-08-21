@@ -263,6 +263,7 @@ bool RefineHoriz(MSA &msaIn, const Tree &tree, unsigned uIters, bool bLockLeft,
 			if (bOscillating)
 				{
 				ProgressStepsDone();
+        CheckMaxIter();
 				goto Osc;
 				}
 			if (bAnyChanges)
@@ -273,6 +274,7 @@ bool RefineHoriz(MSA &msaIn, const Tree &tree, unsigned uIters, bool bLockLeft,
 			}
 
 		ProgressStepsDone();
+    CheckMaxIter();
 		if (bOscillating)
 			break;
 

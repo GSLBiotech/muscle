@@ -235,6 +235,7 @@ SCORE GlobalAlignNoDiags(const ProfPos *PA, unsigned uLengthA, const ProfPos *PB
 void SetInputFileName(const char *pstrFileName);
 void SetIter(unsigned uIter);
 void IncIter();
+void CheckMaxIter();
 void SetMaxIters(unsigned uMaxIters);
 void Progress(unsigned uStep, unsigned uTotalSteps);
 void Progress(const char *szFormat, ...);

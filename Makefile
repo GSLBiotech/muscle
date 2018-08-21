@@ -34,3 +34,6 @@ $(CPPOBJ): %.o: %.cpp
 muscle: $(CPPOBJ)
 	$(LD) -o muscle $(CPPOBJ) $(LDLIBS)
 	strip muscle
+
+clean:
+	-rm -f *.o *.obj muscle

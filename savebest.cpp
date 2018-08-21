@@ -42,7 +42,7 @@ void SaveCurrentAlignment()
 	fprintf(stderr, "\nSaving current alignment ...\n");
 
 	TextFile fileOut(pstrOutputFileName, true);
-	ptrBestMSA->ToFASTAFile(fileOut);
+  ptrBestMSA->ToFile(fileOut);
 
 	fprintf(stderr, "Current alignment saved to \"%s\".\n", pstrOutputFileName);
 	Log("Current alignment saved to \"%s\".\n", pstrOutputFileName);
