@@ -119,7 +119,7 @@ static bool TryRealign(MSA &msaIn, const Tree &tree, const unsigned Leaves1[],
 
 static void RefineHeightParts(MSA &msaIn, const Tree &tree,
  const unsigned InternalNodeIndexes[], bool bReversed, bool bRight,
- unsigned uIter, 
+ unsigned uIter,
  ScoreHistory &History,
  bool *ptrbAnyChanges, bool *ptrbOscillating, bool bLockLeft, bool bLockRight)
 	{
@@ -257,13 +257,12 @@ bool RefineHoriz(MSA &msaIn, const Tree &tree, unsigned uIters, bool bLockLeft,
 				Quit("RefineHeight default case");
 				}
 			RefineHeightParts(msaIn, tree, Internals, bReverse, bRight,
-			  uIter, 
-			  History, 
+			  uIter,
+			  History,
 			  &bAnyChanges, &bOscillating, bLockLeft, bLockRight);
 			if (bOscillating)
 				{
 				ProgressStepsDone();
-        CheckMaxIter();
 				goto Osc;
 				}
 			if (bAnyChanges)
@@ -274,7 +273,6 @@ bool RefineHoriz(MSA &msaIn, const Tree &tree, unsigned uIters, bool bLockLeft,
 			}
 
 		ProgressStepsDone();
-    CheckMaxIter();
 		if (bOscillating)
 			break;
 

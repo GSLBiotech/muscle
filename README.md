@@ -12,5 +12,9 @@ Please cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.
 Modifications
 =============
 
+3.8.1551.gsl2 Sep 27, 2018
+- Do not use -maxiters to abort pre-emptively due to incomplete "ptrBestMSA" results.
+  Note: -maxhours will output the same incomplete results.
+
 3.8.1551.gsl1 Aug 21, 2018
 - Exit after -maxiters and save results with chosen output format.
