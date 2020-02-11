@@ -2,23 +2,18 @@
 
 typedef unsigned __int64 TICKS;
 
-#pragma warning(disable:4035)
-inline TICKS GetClockTicks()
-	{
-	_asm
-		{
-		_emit	0x0f
-		_emit	0x31
-		}
-	}
-
-#define	StartTimer()	__int64 t1__ = GetClockTicks()
-
-#define	GetElapsedTicks()	(GetClockTicks() - t1__)
+static TICKS GetClockTicks()
+{
+  LARGE_INTEGER ctr;
+  QueryPerformanceCounter( & ctr ) ;
+  return ctr.QuadPart;
+}
 
 static double TicksToSecs(TICKS t)
-	{
-	return (__int64) t/2.5e9;
-	}
+{
+  LARGE_INTEGER frequency;
+  QueryPerformanceFrequency( & frequency );
+  return static_cast<double>( t ) / static_cast<double>( frequency.QuadPart );
+}
 
 #endif	// WIN32

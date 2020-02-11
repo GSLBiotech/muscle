@@ -8,6 +8,7 @@
 
 #if	_MSC_VER
 #define TIMING	0
+#include <windows.h>
 #endif
 
 #define VER_3_52	0
@@ -135,7 +136,7 @@ void VectorSet(float dValues[], unsigned n, float d);
 
 // @@TODO should be "not linux"
 #if	_WIN32
-double log2(double x);	// Defined in <math.h> on Linux
+//////////////////double log2(double x);	// Defined in <math.h> on Linux
 #endif
 
 double pow2(double x);

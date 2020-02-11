@@ -56,12 +56,12 @@ static void ChangeColor(TextFile &File, int From, int To)
 		}
 	}
 
-#define COLOR_WINDOW "FFEEE0"
+#define COLOR_BG "FFEEE0"
 
 void MSA::ToHTMLFile(TextFile &File) const
 	{
 	File.PutString("<HTML>\n");
-	File.PutString("<BODY BGCOLOR=\"#" COLOR_WINDOW "\">\n");
+	File.PutString("<BODY BGCOLOR=\"#" COLOR_BG "\">\n");
 	File.PutString("<PRE>");
 
 	int **Colors = MakeColors(*this);
@@ -111,7 +111,7 @@ void MSA::ToHTMLFile(TextFile &File) const
 
 //			File.PutString("<FONT COLOR=\"#000000\">");
 			CurrentColor = -1;
-			File.PutString("<SPAN STYLE=\"background-color:#" COLOR_WINDOW "\">");
+			File.PutString("<SPAN STYLE=\"background-color:#" COLOR_BG "\">");
 			File.PutFormat("%s      ", Name);
 			File.PutString("<SPAN STYLE=\"background-color:#FFFFFF\">");
 			for (unsigned uColIndex = uStartColIndex; uColIndex <= uEndColIndex;
