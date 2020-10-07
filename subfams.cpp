@@ -1,6 +1,7 @@
 #include "muscle.h"
 #include "distfunc.h"
 
+#undef INFINITY
 const float INFINITY = float(1e29);
 const unsigned NILL = uInsane;
 
